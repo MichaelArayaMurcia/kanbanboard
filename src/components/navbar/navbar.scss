@@ -1,0 +1,12 @@
+.navbarContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbarContentContainer {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.4em;
+}
