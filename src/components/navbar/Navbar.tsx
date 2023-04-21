@@ -7,7 +7,7 @@ import "./navbar.scss"
 
 function Navbar() {
   return (
-    <div className="navbarContainer">
+    <nav className="navbarContainer">
         <div className="navbarLogoContainer">
             <button><img src={LogoImage} alt="logo-dark" /></button>
         </div>
@@ -16,7 +16,7 @@ function Navbar() {
             <button>+ Add New Task</button>
             <button><img src={IconVertical} alt="IconVertical" /></button>
         </div>
-    </div>
+    </nav>
   )
 }
 
