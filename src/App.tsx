@@ -1,25 +1,19 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import { Navbar }from "./components/index";
-
-
-
-import './App.css'
-
-
+// 1: Import
+import React, { useState, useEffect } from 'react'
+import styled, { ThemeProvider } from "styled-components"
+import WebFont from 'webfontloader'
+import { Navbar } from './components';
 
 
 function App() {
+
   return (
-
-      <div className="App">
-        <Navbar />      
-        <h1> Prueba </h1>
-      </div>
-
-
-  )
+    <>
+    {
+      <Navbar/>
+    }
+    </>
+  );
 }
 
-export default App
+export default App;
