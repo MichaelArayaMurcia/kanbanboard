@@ -1,18 +1,25 @@
-// 1: Import
-import React, { useState, useEffect } from 'react'
-import styled, { ThemeProvider } from "styled-components"
-import WebFont from 'webfontloader'
-import { Navbar } from './components';
-
+import { ThemeProvider } from 'styled-components';
+import TogglerButton from './components/TogglerButton';
+import GlobalStyle from './styles/global';
+import ThemeContext from './contexts/ThemeContext';
+import { lightTheme, darkTheme } from './styles/themes';
+import useThemeMode from './hooks/useThemeMode';
+import {Navbar} from "./components/index";
 
 function App() {
+  const { theme, themeToggler } = useThemeMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   return (
-    <>
-    {
-      <Navbar/>
-    }
-    </>
+    <ThemeContext>
+      <ThemeProvider theme={themeMode}>
+        <Navbar></Navbar>
+          {/* <GlobalStyle /> */}
+            {/* <header>
+              <TogglerButton themeToggler={themeToggler} />
+            </header> */}
+      </ThemeProvider>
+    </ThemeContext>
   );
 }
 
