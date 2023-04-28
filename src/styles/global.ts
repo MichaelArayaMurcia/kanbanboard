@@ -7,6 +7,10 @@ type GlobalThemeProps = {
 
 const globalStyle = createGlobalStyle`
   :root {
+
+    --LogoDark:  ../assets/logo-dark.svg;
+    --LogoLight:  ../assets/logo-light.svg;
+
     //Colors
 
     --red-hover: #FF9898;
@@ -24,13 +28,12 @@ const globalStyle = createGlobalStyle`
 
     //Typography
     
-    font-family: "Plus Jakarta Sans";
-    --Heading-XL: 24;
-    --Heading-L: 18;
-    --Heading-M: 15;
-    --Heading-S: 12;
-    --Body-L: 13:
-    --Body-M: 12
+    --Heading-XL: 24px;
+    --Heading-L: 18px;
+    --Heading-M: 15px;
+    --Heading-S: 12px;
+    --Body-L: 13px;
+    --Body-M: 12px;
 
 
     //dark-mode
@@ -54,14 +57,28 @@ const globalStyle = createGlobalStyle`
   body  {
     -webkit-font-smoothing: antialiased;
     margin: 0 auto;
-    background-color: ${({ theme }: GlobalThemeProps) => theme.background};
+    background-color: ${({ theme }: GlobalThemeProps) => theme.Background_board};
   }
 
   h1 {
     font-size: 3.375rem;
-    color: ${({ theme }: GlobalThemeProps) => theme.test};
+    color: ${({ theme }: GlobalThemeProps) => theme.text};
   }
 
+  .navbarContainer {
+    background-color: ${({ theme }: GlobalThemeProps) => theme.Navbar_container};
+    border-bottom: solid ${({ theme }: GlobalThemeProps) => theme.Navbar_border};
+  }
+
+  .addTaskButton {
+    background-color: ${({ theme }: GlobalThemeProps) => theme.CTA_Button};
+  }
+
+  .navbarLogo {
+    content: url(${({ theme }: GlobalThemeProps) => theme.LogoImage}) ;
+  }
 `;
+
+console.log();
 
 export default withTheme(globalStyle);

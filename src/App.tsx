@@ -15,7 +15,7 @@ function App() {
       <ThemeProvider theme={themeMode}>
         <Navbar></Navbar>
           <GlobalStyle />       
-              <TogglerButton themeToggler={themeToggler} />
+          <TogglerButton themeToggler={themeToggler} />
       </ThemeProvider>
     </ThemeContext>
   );
