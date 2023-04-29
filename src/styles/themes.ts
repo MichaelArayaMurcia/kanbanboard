@@ -1,5 +1,5 @@
-const LogoImageDark = "../../assets/logo-dark.svg";
-const LogoImageLight = "../../assets/logo-light.svg";
+const LogoImageDark = "../src/assets/logo-dark.svg";
+const LogoImageLight = "../src/assets/logo-light.svg";
 
 export interface ThemeProps {
     background: string;
@@ -43,7 +43,7 @@ export interface ThemeProps {
     Navbar_title: "var(--black)",
     Background_board: "var(--very-dark-grey)",
     Column_background: "var(--lines-light)",
-    LogoImage: LogoImageDark,
+    LogoImage: LogoImageLight,
     
   };
   
@@ -57,5 +57,5 @@ export interface ThemeProps {
     Navbar_title: "var(--black)",
     Background_board: "var(--lightGrey)",
     Column_background: "var(--lines-light)",
-    LogoImage: LogoImageLight,
+    LogoImage: LogoImageDark,
   };
