@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 
 import LogoImageDark from "../../assets/logo-dark.svg" 
-import LogoImageLight from "../../assets/logo-light.svg"
+
 
 import IconVertical from "../../assets/icon-vertical-ellipsis.svg"
 
-import styled from 'styled-components'
-import DevDesk from './assets/images/dev-desk.jpg'
+
 
 import "./navbar.scss"
 
