@@ -2,6 +2,7 @@ import React from 'react'
 
 import  Navbar  from "./navbar/"
 import  Sidebar  from "./sidebar/"
+import  Board  from "./board/"
 
 function index() {
   return (
@@ -9,4 +10,4 @@ function index() {
   )
 }
 
-export {Navbar, Sidebar}
+export {Navbar, Sidebar, Board}

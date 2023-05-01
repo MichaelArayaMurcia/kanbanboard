@@ -55,8 +55,6 @@ const globalStyle = createGlobalStyle`
   }
 
   body  {
-    -webkit-font-smoothing: antialiased;
-    margin: 0 auto;
     background-color: ${({ theme }: GlobalThemeProps) => theme.Background_board};
   }
 
@@ -72,6 +70,10 @@ const globalStyle = createGlobalStyle`
 
   .addTaskButton {
     background-color: ${({ theme }: GlobalThemeProps) => theme.CTA_Button};
+  }
+
+  .navbarContainer_content {
+    border-left: solid ${({ theme }: GlobalThemeProps) => theme.Navbar_border};
   }
 
   .navbarLogo {

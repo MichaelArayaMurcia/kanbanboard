@@ -4,8 +4,8 @@ import GlobalStyle from './styles/global';
 import ThemeContext from './contexts/ThemeContext';
 import { lightTheme, darkTheme } from './styles/themes';
 import useThemeMode from './hooks/useThemeMode';
-import {Navbar, Sidebar} from "./components/index";
-import "./App.css";
+import {Navbar, Sidebar, Board} from "./components/index";
+import "./App.scss";
 
 function App() {
   const { theme, themeToggler } = useThemeMode();
@@ -17,10 +17,11 @@ function App() {
       <GlobalStyle />
       <Navbar></Navbar>     
       <div className="mainBoardContainer">
-        <>
+        <div className="mainSidebarContainer">
           <Sidebar /> 
           <TogglerButton themeToggler={themeToggler} />
-        </>
+        </div>
+        <Board />
       </div>        
       </ThemeProvider>
     </ThemeContext>

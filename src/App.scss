@@ -16,7 +16,13 @@ body {
   border: solid blue;
   /* min-height: 400px; */
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-direction: row;
+  min-height: 87.5vh;
 
+}
+
+.mainSidebarContainer {
+  border: solid yellow;
+  display: flex;
+  flex-direction: column;
 }

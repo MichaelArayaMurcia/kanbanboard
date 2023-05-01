@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 
-
-import styled from 'styled-components'
-
 import "./sidebar.scss"
+
+import boards from "../../data/data.json";
+
+const listOfBoards = boards.boards;
+console.log(listOfBoards);
+
 
 
 function Sidebar (){
