@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
-
+import { createContext, useContext } from "react";
 import "./sidebar.scss"
-
-import boards from "../../data/data.json";
-
-const listOfBoards = boards.boards;
-console.log(listOfBoards);
-
-
+import { boardsContext1 } from "../../App";
 
 function Sidebar (){
+  const { boards } = useContext(boardsContext1);
+
   return (
     <div className="sidebarContainer">
       <h1>All Boards</h1>
 
-      <h3>Platform Launch</h3>
+      {boards.map((board) => {
+        return (
+          <h3> {board.name} </h3>
+          
+        )
+      })
+      }
     </div>
   )
 }
