@@ -79,8 +79,10 @@ const globalStyle = createGlobalStyle`
   .navbarLogo {
     content: url(${({ theme }: GlobalThemeProps) => theme.LogoImage}) ;
   }
-`;
 
-console.log();
+  .mainSidebarContainer {
+    border-right: solid ${({ theme }: GlobalThemeProps) => theme.Navbar_border};    background-color: ${({ theme }: GlobalThemeProps) => theme.Navbar_container};
+  }
+`;
 
 export default withTheme(globalStyle);
